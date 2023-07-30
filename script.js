@@ -67,10 +67,13 @@ const displayListData = (data) => {
                 <tr>
                 <td><img src="${coin.image}" alt="logo" width="50" height="50"></td>
                   
-                <div> 
-                <td>${coin.symbol}</td>
+                
+                <td>${coin.symbol}
+                </br>
+                    <span style="color: #a0bac5; font-size: 12px;">${coin.name}</span>
+                </td>
               
-               </div>
+              
                     <td>
                     <div class="percentage-change-container">
                         <span class="percentage-value">${coin.price_change_percentage_24h.toFixed(2)}%</span>
