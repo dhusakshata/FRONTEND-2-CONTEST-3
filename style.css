@@ -123,7 +123,8 @@ body {
   
 }
 #gridView .card .Name {
-    color: #e6f7ff;
+    color: #a0bac5;
+    font-size: 12px;
    
  }
  .card-header{

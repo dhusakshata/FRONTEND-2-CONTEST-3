@@ -26,15 +26,20 @@ const displayGridData = (data) => {
         card.innerHTML = `
        
         <div class="card-header">
-        <div></div>
-        <div><img class="card-img" src="${coin.image}" alt="${coin.name}"></div>
+       
+        <div><img class="card-img" src="${coin.image}" alt="logo">
+       
+        </div>
         
-        <div style="color:white;">${coin.symbol}</div>
+        <div style="color:white;">${coin.symbol}
+        <p class="Name">${coin.name}</p>
+        </div>
         </div>
         
        <div></div>
 
-        <p class="percentage-change" style="border-radius: 5px;">${coin.price_change_percentage_24h.toFixed(2)}%</p>
+        <p class="percentage-change" style="border-radius: 9px; padding:10px 8px;width: 80px;
+        margin-top: 9px">${coin.price_change_percentage_24h.toFixed(2)}%</p>
             
            
             <p class="Total-Volume">Total Volume: ${coin.total_volume.toLocaleString()}</p>
@@ -60,14 +65,20 @@ const displayListData = (data) => {
             </tr>
             ${data.map(coin => `
                 <tr>
-                <td><img src="${coin.image}" alt="${coin.name}" width="50" height="50"></td>
-                    <td>${coin.name}</td>
+                <td><img src="${coin.image}" alt="logo" width="50" height="50"></td>
+                  
+                <div> 
+                <td>${coin.symbol}</td>
+              
+               </div>
                     <td>
                     <div class="percentage-change-container">
                         <span class="percentage-value">${coin.price_change_percentage_24h.toFixed(2)}%</span>
                     </div>
+                
                 </td>
                     <td>$${coin.current_price.toFixed(3)}</td>
+                  
                     <td>$${coin.market_cap.toLocaleString()}</td>
                     
                 </tr>
